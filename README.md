@@ -10,6 +10,8 @@ Class Lessons
    - Natural Language & Images
    - Ruler DIVs
    - Paperfolded DIVs (music symbols)
+   - Music Button Combinations
+   - Preferences (repeat on, last song played, shuffle on)
 - [ ] TBA
 
 ---
