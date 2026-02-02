@@ -1,4 +1,12 @@
 # Music Player
 Class Lessons
 
-See what I didd
+### To Do List
+- [ ] Make a To Do List
+- [ ] Create repo folders
+- [ ] Bring Music
+- [ ] Bring old music player
+- [ ] Case Study
+- [ ] TBA
+
+---
