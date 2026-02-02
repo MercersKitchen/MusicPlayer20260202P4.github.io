@@ -11,7 +11,9 @@ Class Lessons
    - Ruler DIVs
    - Paperfolded DIVs (music symbols)
    - Music Button Combinations
+   - One image per song, reference of image (URL, date accessed)
    - Preferences (repeat on, last song played, shuffle on)
+   - When can the music button be activated (or not activated)
 - [ ] TBA
 
 ---
