@@ -11,10 +11,17 @@ void divs() {
   divs[1] = appHeight * 54 / paperHeight;
   divs[2] = appWidth * 134 / paperWidth;
   divs[3] = appHeight * 102 / paperHeight;
-  //printArray(divs);
-  rectDIV(divs[0], divs[1], divs[2], divs[3]);
+  //rectDIV(divs[0], divs[1], divs[2], divs[3]); //Demonstration Only
   //
-  for() {} //End FOR
+  //Add divs as needed from paper
+  //
+  //printArray(divs);
+  
+  
+  //
+  for ( int i=0; i<divs.length; i+=4 ) {
+    rectDIV(divs[i], divs[i+1], divs[i+2], divs[i+3]);
+  } //End FOR
   //
 }//End DIVs
 //
