@@ -16,8 +16,6 @@ void divs() {
   //Add divs as needed from paper
   //
   //printArray(divs);
-  
-  
   //
   for ( int i=0; i<divs.length; i+=4 ) {
     rectDIV(divs[i], divs[i+1], divs[i+2], divs[i+3]);
