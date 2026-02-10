@@ -9,6 +9,7 @@ class MusicPlayer {
   //MusicPlayer(int x) {}//End Constructor
   //
   void draw() {
+    println("Hello World");
   }//End Draw
   //
   //Functions or Behaivours
