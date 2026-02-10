@@ -3,10 +3,23 @@ class MusicPlayer {
   //Global Variables
   //
   //Constructor & Multiple Constructors (different parameters)
-  MusicPlayer() {}//End Constructor
+  MusicPlayer() {
+  }//End Constructor
   //
   //MusicPlayer(int x) {}//End Constructor
   //
-  
-  println("Hello World");
+  void draw() {
+  }//End Draw
+  //
+  //Functions or Behaivours
+  //
+  //Getters
+  //
+  //Setters
+  //
+  //Output - Println
+  void helloWorld() {
+    println("Hello World");
+  }//End Hello World
+  //
 }//End Music Player Class
