@@ -13,9 +13,9 @@ MusicPlayer musicPlayer;
 //
 void setup() {
   fullScreen();
-  musicPlayer = new MusicPlayer(); //ERROR, Constructor: if undeclared, NullPointerException, like variable
-  musicPlayer.draw();
-  musicPlayer.errorStatment("Hello World, second time");
+  musicPlayer = new MusicPlayer(16); //ERROR, Constructor: if undeclared, NullPointerException, like variable
+  //musicPlayer.draw();
+  //musicPlayer.errorStatment("Hello World, second time");
 }//End Setup
 //
 void draw() {

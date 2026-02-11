@@ -1,12 +1,15 @@
 class MusicPlayer {
   //
   //Global Variables
+  float[] divs;
   //
   //Constructor & Multiple Constructors (different parameters)
   MusicPlayer() {
   }//End Constructor
   //
-  //MusicPlayer(int x) {}//End Constructor
+  MusicPlayer(int numberOfRectangles) {
+    this.divs = new float[numberOfRectangles*4];
+  }//End Constructor
   //
   void draw() {
     errorStatment("Hello World");
@@ -16,6 +19,12 @@ class MusicPlayer {
   void rect( float x, float y, float w, float h) {
     rect(x, y, w, h);
   } //End RECT
+  void divsArray() {
+    //CONTINUE HERE
+    //Note: develop formulaic lines through copy & paste
+    //End with FOR( int i=0; i<divs.length; i++){}
+    divs[0] = ;
+  } //End DIVs Array
   //
   //Getters
   //
