@@ -24,6 +24,50 @@ class MusicPlayer {
     //Note: develop formulaic lines through copy & paste
     //End with FOR( int i=0; i<divs.length; i++){}
     divs[0] = ;
+    divs[1] = ;
+    divs[2] = ;
+    divs[3] = ;
+    divs[4] = ;
+    divs[5] = ;
+    divs[6] = ;
+    divs[7] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
+    divs[0] = ;
   } //End DIVs Array
   //
   //Getters
