@@ -13,6 +13,7 @@ MusicPlayer musicPlayer;
 //
 void setup() {
   fullScreen();
+  musicPlayer = new MusicPlayer(); //ERROR, Constructor: if undeclared, NullPointerException, like variable
   musicPlayer.helloWorld();
 }//End Setup
 //
