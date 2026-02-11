@@ -9,19 +9,19 @@ class MusicPlayer {
   //MusicPlayer(int x) {}//End Constructor
   //
   void draw() {
-    println("1. Hello World");
+    errorStatment("Hello World");
   }//End Draw
   //
   //Functions or Behaivours
+  void rect( float x, float y, float w, float h) {
+    rect(x, y, w, h);
+  } //End RECT
   //
   //Getters
   //
   //Setters
   //
   //Output - Println
-  void helloWorld() {
-    println("2. Hello World");
-  }//End Hello World
   //Mutliple ERROR statements based on parameters, like Contructors
   void errorStatment(String description) {
     println(description);

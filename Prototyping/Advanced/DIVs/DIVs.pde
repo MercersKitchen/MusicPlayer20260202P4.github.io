@@ -1,5 +1,5 @@
 /* DIVs for Music Interface
-*/
+ */
 //
 //Libraries
 //
@@ -14,13 +14,17 @@ MusicPlayer musicPlayer;
 void setup() {
   fullScreen();
   musicPlayer = new MusicPlayer(); //ERROR, Constructor: if undeclared, NullPointerException, like variable
-  musicPlayer.helloWorld();
+  musicPlayer.draw();
+  musicPlayer.errorStatment("Hello World, second time");
 }//End Setup
 //
-void draw() {}//End Draw
+void draw() {
+}//End Draw
 //
-void keyPressed() {}//End KeyPressed
+void keyPressed() {
+}//End KeyPressed
 //
-void mousePressed() {}//End MousePressed
+void mousePressed() {
+}//End MousePressed
 //
 //End DRIVER
