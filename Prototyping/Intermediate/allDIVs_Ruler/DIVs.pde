@@ -4,37 +4,59 @@
  */
 //
 //Global Variables
-int numberOfDIVs = 1;
+int numberOfDIVs = 2;
 int numberOfParameters = 4; //Review from debugger
 float divs[] = new float[numberOfDIVs*numberOfParameters];
 //
 void divs() {
   //
   // Primitive Style Reading, note float-arithmetic requiring casting
-  divs[0] = appWidth * float(70)/float (279); //Awkward DIV, must rename all Mr. Mercer's Variables // 70=54+16
-  divs[1] = appHeight * float(54)/float(216); //Base Number
-  divs[2] = appWidth * float(134)/float(279); //102=54+(5*16)
-  divs[3] = appHeight * float(102)/float(216); //102=54+(3*16)
-  printArray(divs); //Inspect using printArray, println uses concatenation as a ERROR Inspection
-  rectDIV(divs[0], divs[1], divs[2], divs[3]);
-  //
-  // Array Style Reading & DIV Verification
-  float paperHeight = 216.0;
-  float paperWidth = 279.0;
-  float baseNumber = 54.0;
-  float iterationStart = 16.0;
-  int interation1 = 3; //Note: does not affect float-arithmetic
-  int interation2 = 2;
-  for (int i=0; i<divs.length; i+=4) {
-    divs[i+1] = appHeight * baseNumber/paperHeight; //Base Number //ERROR: casting
-    divs[i+interation1] = appHeight * (baseNumber + (iterationStart*interation1) ) /paperHeight; //102=54+(3*16)
-    divs[i] = appWidth * (baseNumber+iterationStart) /paperWidth; //Awkward DIV, must rename all Mr. Mercer's Variables // 70=54+16
-    divs[i+interation2] = appWidth * (baseNumber + (iterationStart * (interation1+interation2 ) ) ) /paperWidth ; //102=54+(5*16)
-    //
-    rectDIV(divs[i], divs[i+1], divs[i+2], divs[i+3]);
-  }//End Reading DIVs
+  int i = 0;
+  println(appWidth, appHeight, i); 
+  divs[i] = appWidth * 1/4 ;
+  println(divs[i], i);
+  divs[i++] = appHeight * 1/4 ;
+  divs[i++] = appWidth * 1/2 ;
+  println(appHeight * 1/2);
+  divs[i++] = appHeight * 1/2 ;
+  float referent = divs[2] / 13;
+  println( "Referent:", referent, i );
+  divs[i++] = appWidth - referent;
+  divs[i++] = 0 ;
+  divs[i++] = referent ;
+  divs[i++] = referent ;
+  
   //printArray(divs); //Inspect using printArray, println uses concatenation as a ERROR Inspection
+  for ( int j=0; j<divs.length; j+=4 ) {
+    rectDIV(divs[j], divs[j+1], divs[j+2], divs[j+3]);
+  }//End DIVs FOR
+  
+  /*
+  divs[0] = appWidth * referent ;
+   divs[1] = appHeight * referent ;
+   divs[2] = appWidth * referent ;
+   divs[3] = appHeight * referent ;
+   */
+  
+
   //
+  /* Array Style Reading & DIV Verification
+   float paperHeight = 216.0;
+   float paperWidth = 279.0;
+   float baseNumber = 54.0;
+   float iterationStart = 16.0;
+   int interation1 = 3; //Note: does not affect float-arithmetic
+   int interation2 = 2;
+   for (int i=0; i<divs.length; i+=4) {
+   divs[i+1] = appHeight * baseNumber/paperHeight; //Base Number //ERROR: casting
+   divs[i+interation1] = appHeight * (baseNumber + (iterationStart*interation1) ) /paperHeight; //102=54+(3*16)
+   divs[i] = appWidth * (baseNumber+iterationStart) /paperWidth; //Awkward DIV, must rename all Mr. Mercer's Variables // 70=54+16
+   divs[i+interation2] = appWidth * (baseNumber + (iterationStart * (interation1+interation2 ) ) ) /paperWidth ; //102=54+(5*16)
+   //
+   rectDIV(divs[i], divs[i+1], divs[i+2], divs[i+3]);
+   }//End Reading DIVs
+   //printArray(divs); //Inspect using printArray, println uses concatenation as a ERROR Inspection
+   */
 }//End DIVs
 //
 void rectDIV(float x, float y, float w, float h) {
