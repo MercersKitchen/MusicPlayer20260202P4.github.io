@@ -45,7 +45,7 @@ int appWidth, appHeight;
 //
 void setup() {
   //println(displayWidth, displayHeight); //Inspection of Variables
-  //size(); //width //height
+  //size(700, 500); //width //height //700, 500
   fullScreen(); //displayWidth //displayHeight
   appWidth = displayWidth; //Best Practice
   appHeight = displayHeight;
