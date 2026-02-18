@@ -4,7 +4,7 @@
  */
 //
 //Global Variables
-int numberOfDIVs = 2;
+int numberOfDIVs = 1;
 int numberOfParameters = 4; //Review from debugger
 float divs[] = new float[numberOfDIVs*numberOfParameters];
 //
@@ -12,23 +12,33 @@ void divs() {
   //
   // Primitive Style Reading, note float-arithmetic requiring casting
   int i = 0;
-  println(appWidth, appHeight, i); 
-  divs[i] = appWidth * 1/4 ;
-  println(divs[i], i);
-  divs[i++] = appHeight * 1/4 ;
-  divs[i++] = appWidth * 1/2 ;
-  println(appHeight * 1/2);
-  divs[i++] = appHeight * 1/2 ;
-  float referent = divs[2] / 13;
-  println( "Referent:", referent, i );
-  divs[i++] = appWidth - referent;
-  divs[i++] = 0 ;
-  divs[i++] = referent ;
-  divs[i++] = referent ;
+  divs[i] = appWidth*1/4 ;
+  i++;
+  divs[i] = appHeight*1/4 ; //i++ fails in array
+  i++;
+  divs[i] = appWidth*1/2 ;
+  float referent = divs[i] / 13;
+  i++;
+  divs[i] = appHeight*1/2 ;
+  i++;
   
-  //printArray(divs); //Inspect using printArray, println uses concatenation as a ERROR Inspection
+  
+  //println(divs.length);
+  //println(i, appWidth, appHeight); 
+  //println(i, divs[i]);
+  
+  
+  
+  println( "Referent:", referent, i );
+  //divs[i++] = appWidth - referent;
+  //divs[i++] = 0 ;
+  //divs[i++] = referent ;
+  //divs[i++] = referent ;
+  
+  printArray(divs); //Inspect using printArray, println uses concatenation as a ERROR Inspection
   for ( int j=0; j<divs.length; j+=4 ) {
     rectDIV(divs[j], divs[j+1], divs[j+2], divs[j+3]);
+    println("Here"); 
   }//End DIVs FOR
   
   /*
