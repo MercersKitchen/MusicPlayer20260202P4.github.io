@@ -4,9 +4,10 @@
  */
 //
 //Global Variables
-int numberOfDIVs = 8;
+int numberOfDIVs = 8; //Count the # of rect()
 int numberOfParameters = 4; //Review from debugger
 float divs[] = new float[numberOfDIVs*numberOfParameters];
+//Note: Advanced CS creates an array without Global Variables
 //
 void divs() {
   //

@@ -50,6 +50,7 @@ void setup() {
   appWidth = displayWidth; //Best Practice
   appHeight = displayHeight;
   //
+  //GUI based on a grid using a referent measure (identifying columns & rows, X&Y)
   divs();
 } //End setup
 //
