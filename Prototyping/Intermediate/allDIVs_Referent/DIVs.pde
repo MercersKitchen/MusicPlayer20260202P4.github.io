@@ -39,7 +39,7 @@ void divs() {
     row2 = divs[1] + referent*4.5;
     divs[i] += errorIncrease; //Increase height 
   }
-  
+
   //QUIT & Music Button
   i++;
   divs[i] = appWidth - referent;
