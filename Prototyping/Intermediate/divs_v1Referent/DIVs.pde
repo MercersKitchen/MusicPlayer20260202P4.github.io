@@ -28,7 +28,7 @@ void divs() {
   float column3 = column2 + referent;
   float column4 = column3 + referent;
   float column5 = column4 + referent;
-  float column6 = column4 + referent*2;
+  float column6 = column5 + referent*2;
   float row2 = row1 + textHeight + referent*1/2;
   float row3 = row2 + referent + referent*1/2;
   //
@@ -41,10 +41,10 @@ void divs() {
     divs[1] -= errorIncrease; //Move Y-start up
     row1 = divs[1] + referent;
     row2 = row1 + textHeight + referent*1/2;
-    divs[3] += errorIncrease; //Increase height 
+    divs[3] += errorIncrease; //Increase height
   }
   //
-  //QUIT & Music Button
+  //QUIT & Music Button: 4-11
   int i = 4;
   divs[i] = appWidth - referent;
   i++;
@@ -62,51 +62,54 @@ void divs() {
   i++;
   divs[i] = referent;
 
-  //Song Title
+  //Song Title: 12-15
   i++;
   divs[i] = column1;
   i++;
   divs[i] = row1;
   i++;
-  divs[i] = referent*5;
+  divs[i] = textWidth;
   i++;
   divs[i] = textHeight; //For Wrap Around
 
-
-  i++; //Music Buttons
+  i++; //Music Buttons: 16-35
   divs[i] = column1;
   i++;
   divs[i] = row2;
   i++;
-  divs[i] = referent*5;
+  divs[i] = textWidth;
   i++;
   divs[i] = referent;
 
-  i++; //Left Over Buttons
+  //MAKE 5 MORE RECTs OR SQUARES HERE
+
+  i++; //Left Over Buttons: 36-51
   divs[i] = column1;
   i++;
   divs[i] = row3;
   i++;
-  divs[i] = referent*5;
+  divs[i] = textWidth;
   i++;
   divs[i] = referent;
 
-  //Meta Data Rectangles
+  //MAKE 5 MORE RECTs OR SQUARES HERE, repeat of above
+
+  //Meta Data Rectangles: 52-59
   i++;
-  divs[i] = column2;
+  divs[i] = column6;
   i++;
   divs[i] = row1;
   i++;
-  divs[i] = referent*5;
+  divs[i] = textWidth;
   i++;
   divs[i] = textHeight;
 
   i++;
-  divs[i] = column2;
+  divs[i] = column6;
   i++;
   divs[i] = row2;
   i++;
-  divs[i] = referent*5;
+  divs[i] = textWidth;
   i++;
   divs[i] = textHeight;
 
@@ -114,7 +117,6 @@ void divs() {
   for ( int j=0; j<divs.length; j+=4 ) {
     rectDIV(divs[j], divs[j+1], divs[j+2], divs[j+3]);
   }//End DIVs FOR
-
 }//End DIVs
 //
 void rectDIV(float x, float y, float w, float h) {
