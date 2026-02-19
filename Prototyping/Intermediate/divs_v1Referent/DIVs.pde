@@ -18,6 +18,7 @@ void divs() {
   divs[2] = appWidth*1/2 ;
   //
   //Develop a Grid based on the smallest DIV or measure
+  //Music BUttons across the Width of Music Player space
   float referent = divs[2] / 13;
   float column1 = divs[0] + referent;
   float row1 = divs[1] + referent;
@@ -30,23 +31,21 @@ void divs() {
   float column6 = column4 + referent*2;
   float row2 = row1 + textHeight + referent*1/2;
   float row3 = row2 + referent + referent*1/2;
-
-  i++;
-  divs[i] = appHeight*1/2 ;
+  //
+  divs[3] = appHeight*1/2 ;
   //Media Calculation ERROR
   float testHeight = referent*2.5 + textHeight*2;
   float errorIncrease = referent*1/2;
-  println( divs[i] < testHeight, divs[i], testHeight, referent );
-  while (divs[i] < testHeight) { //Height Calculation ERROR
+  while (divs[3] < testHeight) { //Height Calculation ERROR
     //Extend Height by moving divs[1] up one referent, and extending rect() one-referent
     divs[1] -= errorIncrease; //Move Y-start up
     row1 = divs[1] + referent;
-    row2 = divs[1] + referent*4.5;
-    divs[i] += errorIncrease; //Increase height 
+    row2 = row1 + textHeight + referent*1/2;
+    divs[3] += errorIncrease; //Increase height 
   }
-
+  //
   //QUIT & Music Button
-  i++;
+  int i = 4;
   divs[i] = appWidth - referent;
   i++;
   divs[i] = appHeight*0;
