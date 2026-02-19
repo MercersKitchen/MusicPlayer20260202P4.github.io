@@ -18,7 +18,7 @@ void divs() {
   divs[2] = appWidth*1/2 ;
   //
   //Develop a Grid based on the smallest DIV or measure
-  //Music BUttons across the Width of Music Player space
+  //Music Buttons across the Width of Music Player space
   float referent = divs[2] / 13;
   float column1 = divs[0] + referent;
   float row1 = divs[1] + referent;

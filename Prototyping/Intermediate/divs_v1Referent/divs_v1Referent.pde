@@ -4,13 +4,13 @@
  - populate your divs[Array] one line at a time
  - review for patterns of local build variables based on referent repetitions
  
- Rmeinders
+ ** Humans verify rect(), computers see variables
+ 
+ Reminders
  - Libraries add specific functions to ease programming burdon
  - Must add some libraries in the IDE and the code, like Minim
  - Global Varaibles on harddrive used throuhgout the program sections
- 
- - only one rect() line, sees all variables
- - using arrays, not primitive variables
+
  
  - Once setup() is done, draw() starts looping
  - Can temporarily pause draw() with noLoop() & loop() to wait (behind booleans or interactions)

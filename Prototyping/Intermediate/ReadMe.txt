@@ -9,6 +9,17 @@ Counting in groups of 4, what are the choices I have, identified using modulus
 
 ---
 
+v2: local floats as arrays, deal with row verification, observed in prototyping as an ERROR
+- single degree, multiple variable polynomial
+
+Build Procedural ERROR handling
+- main div-width is given, referent is calculated
+  height must be verified
+- what are the numbers that should be calculated into the divs[]
+** Caution: error with Row #3 from grid
+
+---
+
 Example Coding Structures to create a flowchart
 
 Using Ternary to populate choice of two options
