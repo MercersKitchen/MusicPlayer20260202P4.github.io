@@ -20,6 +20,10 @@ Build Procedural ERROR handling
 
 ---
 
+v3: apply flow chart to coding structures in repeating groups of 4 (started counting in 4's, can count other ways
+
+---
+
 Example Coding Structures to create a flowchart
 
 Using Ternary to populate choice of two options
