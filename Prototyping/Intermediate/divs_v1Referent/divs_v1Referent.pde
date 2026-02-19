@@ -1,5 +1,9 @@
 /* DIVs in Procedural VOICE
  
+ Assignment: using paper or virtual paper, draw a grid and identify the rect()s of your Case Study
+ - populate your divs[Array] one line at a time
+ - review for patterns of local build variables based on referent repetitions
+ 
  Rmeinders
  - Libraries add specific functions to ease programming burdon
  - Must add some libraries in the IDE and the code, like Minim
