@@ -44,7 +44,7 @@ void divs() {
     divs[3] += errorIncrease; //Increase height
   }
   //
-  for ( int i=0; i<divs.length; i++) {
+  for ( int i=4; i<divs.length; i++) { //CAUTION: i=4 until above rewritten
     if ( i%4==0 && int(i/4)==0 ) {
       divs[i] = appWidth*1/4;
     } else if ( i%4==0 && int(i/4)==1 ) {
