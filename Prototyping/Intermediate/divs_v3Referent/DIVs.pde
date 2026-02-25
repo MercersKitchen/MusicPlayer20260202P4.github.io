@@ -14,10 +14,10 @@ void divs() {
   //Develop a Grid based on the smallest DIV or measure
   //Music Buttons across the Width of Music Player space
   //NOTE: to be erased after FOR Built
-  //println(divs.length);
+  //ErrorCheck("Did the Array Elements load correctly:", divs.length);
   //rect(0) must be defined for ERROR Check
   divs[0] = appWidth*1/4 ;
-  divs[1] = appHeight*1/4 ; //i++ fails in array
+  divs[1] = appHeight*1/4 ;
   divs[2] = appWidth*1/2 ;
   divs[3] = appHeight*1/2 ;
   //
@@ -30,16 +30,17 @@ void divs() {
     if ( i>0 && i<5) column[i] = column[i-1] + referent;
     if ( i==5 ) column[i] = column[i-1] + referent*2;
   }
-  //printArray(column);
+  //ErrorCheck("Column Loading", column);
   float[] row = new float[3];
   row[0] = divs[1] + referent;
   row[1] = row[0] + textHeight + referent*1/2;
   row[2] = row[1] + referent + referent*1/2;
-  //printArray(row);
+  //ErrorCheck("Row Loading", row);
   //
   //Media Calculation ERROR
   float testHeight = referent*2.5 + textHeight*2;
   float errorIncrease = referent*1/2;
+  //ErrorCheck("Testing Height of Music GUI", divs[1], divs[3]); //See WHILE-end
   while (divs[3] < testHeight) { //Height Calculation ERROR
     //Extend Height by moving divs[1] up one referent, and extending rect() one-referent
     divs[1] -= errorIncrease; //Move Y-start up
@@ -48,6 +49,7 @@ void divs() {
     row[2] = row[1] + referent + referent*1/2;
     divs[3] += errorIncrease; //Increase height
   }
+  //ErrorCheck("Checked Height of Music GUI", divs[1], divs[3]);
   //
   int a=4; //Loop Counters for music buttons, first row
   int b=0; //DO NOT RESET once used
@@ -114,14 +116,17 @@ void divs() {
       //Empty Else
     }
     //
-    //println(i, divs[i]);
+    //ErrorCheck("Inside FOR, Checking index and DIV-var",  i, divs[i]);
   }
-  //printArray(divs); //Inspect using printArray, println uses concatenation as a ERROR Inspection
-  //
+  //ErrorCheck("Inspect DIVs Array", divs);
+}// End divs
+//
+//Note: index below matches %4 counting to load array
+void seeDIVasRect() {
   for ( int j=0; j<divs.length; j+=4 ) {
     rectDIV(divs[j], divs[j+1], divs[j+2], divs[j+3]);
-  }//End DIVs FOR
-}//End DIVs
+  }
+}//End See DIVs
 //
 void rectDIV(float x, float y, float w, float h) {
   //DIVs: dividing out the CANVAS in non-overlapping sections
