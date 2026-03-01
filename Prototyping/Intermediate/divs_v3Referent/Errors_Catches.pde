@@ -19,6 +19,6 @@ void ErrorCheck(String statement, float var1, float var2) {
   println(statement, var1, var2);
 }
 void ErrorCheck(String statement, float[] array) {
-  println("\n" + statement);
+  println("\n" + statement); //Giving Space to Listing the Array
   printArray(array);
 }
