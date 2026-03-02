@@ -4,7 +4,7 @@ Intermediate Code Structures so far
 v1
 - Subprograms
 - Creating an Array using Global Variables
-- Using a PRocuedure to Write One Line of Code and Access it with Parameters
+- Using a Procedure to Write One Line of Code and Access it with Parameters
 - Using a FOR Loop to Skip Count in Groups of 4, related to rect(parameters)
 - Introducing Modulus-operator and remainder to simulate skip counting rect(parameters) in groups of 4
 - Using local variables to simulate a referent-measure based grid pattern as a GUI Case Study
@@ -23,6 +23,14 @@ v3
 - Creating ERROR-Catch println() into set of procedures formatted to locate error
 
 v4
+- Create a Boolean for displaying the Music Menu
+- In KeyPress, review 2 types of keys
+- In MousePressed, review mouseX&Y with how rect(parameters) are added to create a mouseBox
+- In MousePressed, demonstrate how a local variable and a conditional-copy-paste can read through an array
+- Demonstrate how a Boolean-switch If-Else statement can be rewritten as a method-return
+
+v5
+- Demonstrate how array-formulae can be abstracted as polynomial-style arithmetic, repeating code as a single formulae
 
 Advanced Code Structures so far
 
