@@ -9,6 +9,7 @@ class MusicPlayer {
   //
   MusicPlayer(int numberOfRectangles) {
     this.divs = new float[numberOfRectangles*4];
+    //divs();
   }//End Constructor
   //
   void draw() {
