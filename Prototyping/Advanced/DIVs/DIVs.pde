@@ -18,14 +18,30 @@ void setup() {
   appHeight = displayHeight;
   //
   musicPlayer = new MusicPlayer(16); //ERROR, Constructor: if undeclared, NullPointerException, like variable
-  musicPlayer.draw();
+  musicPlayer.seeQuitMusicButton();
+
   //musicPlayer.errorStatment("Hello World, second time");
 }//End Setup
 //
-void draw() {}//End Draw
+void draw() {
+  //
+  //Activate Music GUI
+  //ErrorCheck("draw() Music GUI set:", musicGUI);
+  if ( musicPlayer.musicPlayerGUI()==true ) {
+    musicPlayer.draw();
+  } else {
+    background(0);
+  }
+  musicPlayer.seeQuitMusicButton();
+  //
+}//End Draw
 //
-void keyPressed() {}//End KeyPressed
+void keyPressed() {
+  musicPlayer.keyPressed();
+}//End KeyPressed
 //
-void mousePressed() {}//End MousePressed
+void mousePressed() {
+  musicPlayer.mousePressed();
+}//End MousePressed
 //
 //End DRIVER

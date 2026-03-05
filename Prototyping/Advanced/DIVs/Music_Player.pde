@@ -2,6 +2,7 @@ class MusicPlayer {
   //
   //Global Variables
   float[] divs;
+  Boolean musicGUI=false;
   //
   //Constructor & Multiple Constructors (different parameters)
   MusicPlayer() {
@@ -9,13 +10,40 @@ class MusicPlayer {
   //
   MusicPlayer(int numberOfRectangles) {
     this.divs = new float[numberOfRectangles*4];
-    //divs();
+    divs();
   }//End Constructor
   //
   void draw() {
-    ERRORCheck("Hello World");
+    //ERRORCheck("Hello World");
     seeMusicGUI();
   }//End Draw
+  void mousePressed() {
+    //ERROR Check NUM below
+    //int num=8; //ERROR Check i%4=0, int(i/4)=3, num=8
+    //println(divs[num], divs[num+1], divs[num+2], divs[num+3]);
+    //
+    //mouseX>divs[num] && mouseX<divs[num]+divs[num+2] && mouseY>divs[num+1] && mouseY<divs[num+1]+divs[num+3]
+    //CAUTION: IF Statements will execute each time
+    //Note: easily used with COPY & PASTE
+    int num=4;
+    if ( mouseX>divs[num] && mouseX<divs[num]+divs[num+2] && mouseY>divs[num+1] && mouseY<divs[num+1]+divs[num+3] ) exit();
+    num=8;
+    if ( mouseX>divs[num] && mouseX<divs[num]+divs[num+2] && mouseY>divs[num+1] && mouseY<divs[num+1]+divs[num+3] ) musicGUI = varSwitch(musicGUI);
+  }// End Mouse Pressed
+  void keyPressed() {
+    //key=='CAP' || key=='LOWER' //Note" Caps Lock
+    //key==CODED || keyCode==ESC //Special Keys
+    if (key==CODED || keyCode==ESC) exit();
+    if (key=='Q' || key=='q') exit();
+    if (key=='M' || key=='m') musicGUI = varSwitch(musicGUI);
+  }//End Key Pressed
+  Boolean varSwitch(Boolean variable) {
+    if ( variable==true ) {
+      return variable=false;
+    } else {
+      return variable=true;
+    }
+  }//End Boolean Variable Switch
   //
   //Functions or Behaivours
   void divs() {
@@ -133,6 +161,12 @@ class MusicPlayer {
     row[2] = poly( 1, row[1], 1, referent, 0.5, referent ); //row[1] + referent + referent*1/2;
   } //End Building Rows
   //
+  void seeQuitMusicButton() {
+    for ( int j=4; j<9; j+=4 ) {
+      rectDIV(divs[j], divs[j+1], divs[j+2], divs[j+3]);
+    }
+  }//End See Quit & Music Button
+  //
   void seeMusicGUI() {
     int j=0;
     rectDIV(divs[j], divs[j+1], divs[j+2], divs[j+3]);
@@ -160,6 +194,10 @@ class MusicPlayer {
   } //END
   //
   //Getters
+  Boolean musicPlayerGUI() {
+    return musicGUI;
+  }//End Music Player GUI
+  //
   //
   //Setters
   //
