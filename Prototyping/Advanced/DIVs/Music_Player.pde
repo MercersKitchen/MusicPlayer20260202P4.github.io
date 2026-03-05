@@ -167,9 +167,9 @@ class MusicPlayer {
   //Mutliple ERROR statements based on parameters, like Contructors
   void ERRORCheck(String description) {
     println(description);
-  }//End Hello World
+  }//End
   void ERRORCheck(String description, float variable) {
     println(description, variable);
-  }//End Hello World
+  }//End
   //
 }//End Music Player Class
