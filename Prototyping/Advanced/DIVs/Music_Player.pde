@@ -6,6 +6,7 @@ class MusicPlayer {
   //
   //Constructor & Multiple Constructors (different parameters)
   MusicPlayer() {
+    //See Abstract Classes
   }//End Constructor
   //
   MusicPlayer(int numberOfRectangles) {
