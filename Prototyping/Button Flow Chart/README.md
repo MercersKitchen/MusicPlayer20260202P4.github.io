@@ -45,7 +45,7 @@
     - Button Active Turns Off
     - Rewind to current song
     - not.isPlaying()
-- Note, Loop: in Preferences able to set how many loops is a single click
+- [ ] Loop, Note: in Preferences able to set how many loops is a single click
 - [ ] Shuffle, Single Click: entire playlist
 - [ ] Shuffle, Double Click: Loop & Shuffle Entire Playlist
 - [ ] Shuffle OPTIONAL, mini playlists saved in Preferences
