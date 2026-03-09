@@ -7,7 +7,7 @@
 ### Second Set of Buttons
 - [ ] Mute
 - [ ] Loop, Single Click
-    - Symbol: Number 1
+   - Symbol: Number 1
 - [ ] Loop, Double Click
     - Symbol: Letter I (infinite)
 - [ ] Loop, Triple Click, Off
