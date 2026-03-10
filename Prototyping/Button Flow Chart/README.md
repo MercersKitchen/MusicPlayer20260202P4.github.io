@@ -1,4 +1,7 @@
 # To Do List from Music Buttons Flow Chart Images
+- Frist Set of Buttons, <a href="">Click Here, when available<a>
+- Second Set of Buttons, <a href="">Click Here, when available<a>
+- How to Draw the Buttons, <a href="">Click Here, when available<a>
 
 # First Set of Buttons
 
@@ -49,5 +52,7 @@
 - [ ] Shuffle, Single Click: entire playlist
 - [ ] Shuffle, Double Click: Loop & Shuffle Entire Playlist
 - [ ] Shuffle OPTIONAL, mini playlists saved in Preferences
+
+# How to Draw the Buttons
 
 ---
