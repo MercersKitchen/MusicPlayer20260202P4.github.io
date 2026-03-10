@@ -1,10 +1,10 @@
 # To Do List from Music Buttons Flow Chart Images
 - Frist Set of Buttons,
-<a href="https://github.com/MercersKitchen/MusicPlayer20260202P4.github.io/tree/main/Prototyping/Button%20Flow%20Chart#first-set-of-buttons">Click Here, when available<a>
+<a href="https://github.com/MercersKitchen/MusicPlayer20260202P4.github.io/tree/main/Prototyping/Button%20Flow%20Chart#first-set-of-buttons">Click Here<a>
 - Second Set of Buttons,
-<a href="https://github.com/MercersKitchen/MusicPlayer20260202P4.github.io/tree/main/Prototyping/Button%20Flow%20Chart#second-set-of-buttons">Click Here, when available<a>
+<a href="https://github.com/MercersKitchen/MusicPlayer20260202P4.github.io/tree/main/Prototyping/Button%20Flow%20Chart#second-set-of-buttons">Click Here<a>
 - How to Draw the Buttons,
-<a href="https://github.com/MercersKitchen/MusicPlayer20260202P4.github.io/tree/main/Prototyping/Button%20Flow%20Chart#how-to-draw-the-buttons">Click Here, when available<a>
+<a href="https://github.com/MercersKitchen/MusicPlayer20260202P4.github.io/tree/main/Prototyping/Button%20Flow%20Chart#how-to-draw-the-buttons">Click Here<a>
 
 # First Set of Buttons
 
