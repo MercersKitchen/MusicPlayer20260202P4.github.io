@@ -27,9 +27,9 @@ class MusicPlayer {
     //CAUTION: IF Statements will execute each time
     //Note: easily used with COPY & PASTE
     int num=4;
-    if ( mouseX>divs[num] && mouseX<divs[num]+divs[num+2] && mouseY>divs[num+1] && mouseY<divs[num+1]+divs[num+3] ) exit();
+    if ( mouseReturn (num) ) exit();
     num=8;
-    if ( mouseX>divs[num] && mouseX<divs[num]+divs[num+2] && mouseY>divs[num+1] && mouseY<divs[num+1]+divs[num+3] ) musicGUI = varSwitch(musicGUI);
+    if ( mouseReturn (num) ) musicGUI = varSwitch(musicGUI);
   }// End Mouse Pressed
   void keyPressed() {
     //key=='CAP' || key=='LOWER' //Note" Caps Lock
@@ -45,6 +45,9 @@ class MusicPlayer {
       return variable=true;
     }
   }//End Boolean Variable Switch
+  Boolean mouseReturn (int num) {
+    return mouseX>divs[num] && mouseX<divs[num]+divs[num+2] && mouseY>divs[num+1] && mouseY<divs[num+1]+divs[num+3];
+  }//End Mouse Return
   //
   //Functions or Behaivours
   void divs() {
