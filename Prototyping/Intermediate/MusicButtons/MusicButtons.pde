@@ -1,7 +1,18 @@
 /* Music Buttons
 */
 //
-void setup() {}//End Setup
+//Global Variables
+int appWidth, appHeight;
+//
+void setup() {
+  fullScreen();
+  appWidth = displayWidth;
+  appHeight = displayHeight;
+  //
+  //Population
+  
+  //
+}//End Setup
 //
 void draw() {}//End Draw
 //
