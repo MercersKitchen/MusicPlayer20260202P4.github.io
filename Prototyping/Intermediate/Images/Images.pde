@@ -19,7 +19,7 @@ void setup() {
   //GUI based on a grid using a referent measure (identifying columns & rows, X&Y)
   divs();
   //ErrorCheck("End Setup Music GUI set:", musicGUI);
-  fileLoading();
+  fileImageLoading();
 } //End setup
 //
 void draw() {

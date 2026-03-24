@@ -1,4 +1,4 @@
-void imageDrawing( PImage image, int i ) {
+void imageDrawing( PImage image, int i ) { //Not Aspect Ratio
   image( image, divs[i], divs[i+1], divs[i+2], divs[i+3] );
 }//End Image
 //
@@ -82,6 +82,16 @@ void imageDrawingAspectRatio( PImage image, int i ) {
     } //End WHILE
   }
   //
+  /* CAUTION: local variable use v. Global Variable use (& garbage collection)
+   - Calcualtion currently completed 60/s
+   - if imageWidthAdjusted, imageHeightAdjusted compared to divs[i+2] & divs[i+3]
+   ..& calculation redone when divs change, then saves as global variables
+   - Calculation only needs to be done in setup()
+   
+   - TBA: divs[i], divs[i+1]
+   ..AutoCentering LEFT, CENTER, RIGHT, TOP CENTER BOTTOM
+   - Also see above
+   */
   image( image, divs[i], divs[i+1], imageWidthAdjusted, imageHeightAdjusted );
 }//End imageDrawingAspectRatio
 //

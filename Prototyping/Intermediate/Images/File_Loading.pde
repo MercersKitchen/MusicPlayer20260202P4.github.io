@@ -9,7 +9,7 @@ int currentFile = numberOfFiles - numberOfFiles; //ZERO
 //
 PImage[] imagesPlayList;
 //
-void fileLoading() {
+void fileImageLoading() {
   String upArrow = ".."; //2x
   String open = "/";
   String dependanciesFolder = "Dependancies"; //Relative Pathway
