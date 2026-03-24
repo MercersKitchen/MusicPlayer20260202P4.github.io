@@ -52,7 +52,7 @@ v6?
 
 ---
 
-NEXT 2D Music Shapes
+NEXT 2D Music Symbols
 - What did the Library of Music Shapes do in CS10
 - What is the procedure doing in CS20
 
