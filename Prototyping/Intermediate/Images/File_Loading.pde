@@ -7,7 +7,6 @@
 int numberOfFiles = 0; //Best Practice
 int currentFile = numberOfFiles - numberOfFiles; //ZERO
 //
-int[] imageWidth, imageHeight;
 PImage[] imagesPlayList;
 //
 void fileLoading() {
@@ -23,10 +22,10 @@ void fileLoading() {
   fileReading(imagesDirectory); //Sets Music Variables, used for images
 } //End File Loading
 //
-void fileReading(String pathway) {
-  File directory = new File(pathway); //Uses Java Library to create class (variables & code)
+void fileReading(String directory) {
+  File directoryLocal = new File(directory); //Uses Java Library to create class (variables & code)
   //File[] fileNames local & used for both music and images
-  File[] fileNames = directory.listFiles(); //Uses built in class to list all files
+  File[] fileNames = directoryLocal.listFiles(); //Uses built in class to list all files
   //
   //String[] files local and used for both music and images
   String[] files = new String[fileNames.length];
@@ -34,7 +33,7 @@ void fileReading(String pathway) {
   int i=0;
   if ( fileNames != null ) {
     for ( File file : fileNames ) { //FOR EACH Loop, creates local class
-      files[i] = pathway + file.getName(); //print fileNames.getName() Object to String
+      files[i] = directory + file.getName(); //print fileNames.getName() Object to String
       //Note: getName() is built in code
       i++; //iteration necessary here, not in regular FOR
     }

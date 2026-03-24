@@ -3,7 +3,7 @@
  */
 //
 //Library - Minim
-import java.io.File;
+import java.io.File; //Partial & Wild Card, *
 //
 //Global Variables
 int appWidth, appHeight;

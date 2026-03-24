@@ -19,7 +19,7 @@ void imageDrawingAspectRatio( PImage image, int i ) {
   //
   //Verification: looks good
   //IF-statements, include more code than a phrase of
-  if ( imageHeightAdjusted > divs[i+3] ) {
+  if ( image.width > divs[i+2] ) {
     //println("Image doesn't fit, program ended ... Fatal Flaw, must be solved ... Image doesn't show.");
     //exit();
     int indexWhile = 0; //Local Variable to IF-Statement
