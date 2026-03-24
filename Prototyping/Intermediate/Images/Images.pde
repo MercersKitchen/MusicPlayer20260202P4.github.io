@@ -1,32 +1,5 @@
 /* Images in Procedural VOICE
-
-
-- 
-
-
-
- - Required: reading and writing Arrays with FOR
- - Using int(casting) and modulus
- - Able to use float(terminating decimals) but more difficult
- 
- Assignment: using paper or virtual paper, draw a grid and identify the rect()s of your Case Study
- - populate your divs[Array] one line at a time
- - review for patterns of local build variables based on referent repetitions
- 
- ** Humans verify rect(), computers see variables
- 
- Reminders
- - Libraries add specific functions to ease programming burdon
- - Must add some libraries in the IDE and the code, like Minim
- - Global Varaibles on harddrive used throuhgout the program sections
- 
- 
- - Once setup() is done, draw() starts looping
- - Can temporarily pause draw() with noLoop() & loop() to wait (behind booleans or interactions)
- - Note: delay() will stop the program for a specified time
- 
- - Reading Code the cursor & braces
- 
+ - shows basic Music Menu
  */
 //
 //Library - Minim
@@ -35,9 +8,7 @@ import java.io.File;
 //Global Variables
 int appWidth, appHeight;
 Boolean musicGUI=false;
-
 //
-
 void setup() {
   //println(displayWidth, displayHeight); //Inspection of Variables
   //size(700, 500); //width //height //700, 500
@@ -56,7 +27,9 @@ void draw() {
   //Activate Music GUI
   //ErrorCheck("draw() Music GUI set:", musicGUI);
   if ( musicGUI==true ) {
-    seeMusicGUI();
+    //seeMusicGUI();
+    imageDrawing( imagesPlayList[currentFile], 0 ); //imageDrawingAspectRatio
+    imageDrawingAspectRatio( imagesPlayList[currentFile], 12 ); //imageDrawing
   } else {
     background(0);
   }
@@ -84,6 +57,8 @@ void keyPressed() {
   if (key==CODED || keyCode==ESC) exit();
   if (key=='Q' || key=='q') exit();
   if (key=='M' || key=='m') musicGUI = varSwitch(musicGUI);
+  if (key=='N' || key=='n') currentFile = loopVar( currentFile ); //See Buttons
+  checkNum (currentFile);
 } //End Key Pressed
 Boolean varSwitch(Boolean variable) {
   if ( variable==true ) {
