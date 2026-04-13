@@ -37,13 +37,13 @@ String title = "Wahoo!";
  - if font is too big, wrap around happens
  - OR full string is not drawn
  */
- /*Fonts from OS
+ //Fonts from OS
  println("Start of Console"); //ERROR: in case CONSOLE Memory not enough
  String[] fontList = PFont.list(); //To list all fonts available on system
  printArray(fontList); //For listing all possible fonts to choose, then createFont
  //Spelling Counts and must compare CONSOLE v Tools / Create Font / Create Font Spelling
  //Tools / Create Font / Find Font / Do Not Press "OK", known conflict between loadFont() and createFont()
- */
+ //
 // Students enter all text from Case Study
 //
 // Fonts from OS
