@@ -20,6 +20,9 @@ void setup() {
   divs();
   //ErrorCheck("End Setup Music GUI set:", musicGUI);
   fileImageLoading();
+  
+  
+  fontSize();
 } //End setup
 //
 void draw() {
