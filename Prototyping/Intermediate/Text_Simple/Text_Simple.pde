@@ -31,7 +31,7 @@ rect(messageDIV_X, messageDIV_Y, messageDIV_Width, messageDIV_Height);
 //
 //Strings, Text, Literal
 //Note: metaData.mp3
-String title = "Wahoo!";
+String title = "Text Place Holder!"; //
 /* Full String longer than Rectangle, "Wahoo! I changed 2D Size."
  - divHeight must fit the font size or text is not shown (Advanced, error check includes %-decrease)
  - Fonts includes the in WHITE SPACE around the foreground "coloured ink"
@@ -80,8 +80,9 @@ float constantDecrease = 0.99;
 int iWhile=0;
 textFont(font, fontSize1); //must include textSize() before text() & textWidth()
 while ( textWidth(title) > songTitleDivWidth ) {
+  //println("While #1"); //Infinite WHILE Check
   iWhile++;
-  if ( iWhile>10000 ) {
+  if ( iWhile>10000 ) { //>1000 means -1 text or i
     println("Infninte WHILE Loop");
     exit();
   }
@@ -91,14 +92,30 @@ while ( textWidth(title) > songTitleDivWidth ) {
 text( title, songTitleDivX, songTitleDivY, songTitleDivWidth, songTitleDivHeight );
 //
 textFont(font, fontSize2); //must include textSize() before text() & textWidth()
+iWhile=0;
 while ( textWidth(title) > messageDIV_Width ) {
-  println("here1"); //Infinite WHILE
+  //println("While #2"); //Infinite WHILE Check
+  iWhile++;
+  if ( iWhile>10000 ) { //>1000 means -1 text or i
+    println("Infninte WHILE Loop");
+    exit();
+  }
+  fontSize2 *= constantDecrease;
+  textFont(font, fontSize2);
 }
 text( title, messageDIV_X, messageDIV_Y, messageDIV_Width, messageDIV_Height );
 //
 textFont(font, fontSize3); //must include textSize() before text() & textWidth()
-while ( textWidth(title) > messageDIV_Width ) {
-  println("here1"); //Infinite WHILE
+iWhile=0;
+while ( textWidth(title) > quitWidth ) {
+  //println("While #3"); //Infinite WHILE Check
+  iWhile++;
+  if ( iWhile>10000 ) { //>1000 means -1 text or i
+    println("Infninte WHILE Loop");
+    exit();
+  }
+  fontSize3 *= constantDecrease;
+  textFont(font, fontSize3);
 }
 text( title, quitX, quitY, quitWidth, quitHeight );
 fill(resetInk);
