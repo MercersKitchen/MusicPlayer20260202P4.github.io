@@ -27,9 +27,9 @@ void draw() {
   //Activate Music GUI
   //ErrorCheck("draw() Music GUI set:", musicGUI);
   if ( musicGUI==true ) {
-    //seeMusicGUI();
-    imageDrawing( imagesPlayList[currentFile], 0 ); //imageDrawingAspectRatio
-    imageDrawingAspectRatio( imagesPlayList[currentFile], 12 ); //imageDrawing
+    seeMusicGUI();
+    //imageDrawing( imagesPlayList[currentFile], 0 ); //imageDrawingAspectRatio
+    //imageDrawingAspectRatio( imagesPlayList[currentFile], 12 ); //imageDrawing
   } else {
     background(0);
   }
