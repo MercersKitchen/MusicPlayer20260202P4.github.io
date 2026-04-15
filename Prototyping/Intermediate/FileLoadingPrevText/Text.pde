@@ -35,10 +35,9 @@ void fontSteup() {
 void fontSize() {
   //See Case Study, Count DIVs that require Strings: 6
   float[] fontSize = new float[6];
-  printArray(fontSize);
-  for ( float size: fontSize ) {
-    size = appHeight;
-    println("My Size is", size);
+  //Note: must use FOR to read-in array, FOR-Each to Write-Out
+  for ( int i=0; i<fontSize.length; i++  ) {
+    fontSize[i] = appHeight;
   }
-  printArray(fontSize);
+  ErrorCheck("Font Size Loading", fontSize);
 }//End Font Size
