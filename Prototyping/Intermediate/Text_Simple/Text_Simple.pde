@@ -120,3 +120,4 @@ while ( textWidth(title) > quitWidth ) {
 text( title, quitX, quitY, quitWidth, quitHeight );
 fill(resetInk);
 //
+println(songTitleDivHeight);

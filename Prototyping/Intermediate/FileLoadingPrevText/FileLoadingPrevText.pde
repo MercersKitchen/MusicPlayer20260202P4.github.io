@@ -22,7 +22,8 @@ void setup() {
   fileImageLoading();
   
   
-  fontSize();
+  fontSteup();
+  //
 } //End setup
 //
 void draw() {
