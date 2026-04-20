@@ -23,11 +23,27 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 //
-//Global Varaibles
+//Global Variables
 Minim minim; //initates entire class
 int numberOfSongs = 1; //Best Practice
 int numberOfSoundEffects = 1; //Best Practice
 AudioPlayer[] playList = new AudioPlayer[ numberOfSongs ];
 AudioPlayer[] soundEffects = new AudioPlayer[ numberOfSoundEffects];
 int currentSong = numberOfSongs - numberOfSongs; //ZERO, Math Property
+//
+//Display
+size(700, 500); //width //height
+//fullScreen(); //displayWidth //displayHeight
+int appWidth = width; //Best Practice
+int appHeight = height;
+//
+//Music Loading - STRUCTURED Review
+minim = new Minim(this); //Manditory
+String upArrow = "..";
+String musicFolder = "Music/"; //Developer Specific
+String soundEffectsFolder = "Sound Effects/"; //Developer Specific
+String normalFolder = "Dependancies/"; //Developer Specific
+String songName1 = "groove";
+String soundEffect1 = "Car_Door_Closing";
+String fileExtension_mp3 = ".mp3";
 //
