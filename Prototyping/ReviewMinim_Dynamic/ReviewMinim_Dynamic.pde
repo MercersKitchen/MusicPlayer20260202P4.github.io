@@ -70,8 +70,8 @@ void setup() {
      */
   } else {
     //CAUTION: will execute if variables created properly
-    playList[currentSong].play();
-    //soundEffects[currentSong].play();
+    //playList[currentSong].play();
+    soundEffects[currentSong].play();
     //
     printArray(playList);
     printArray(soundEffects);
