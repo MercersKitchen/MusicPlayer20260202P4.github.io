@@ -47,7 +47,7 @@ String songName1 = "groove";
 String soundEffect1 = "Car_Door_Closing";
 String fileExtension_mp3 = ".mp3";
 //
-//
+//Directory and Pathway
 String musicDirectory = upArrow + upArrow + upArrow + normalFolder + musicFolder //Concatenation
 String soundEffectsDirectory =  upArrow + upArrow + upArrow + normalFolder + soundEffectsFolder; //Concatenation
 String pathway = musicDirectory + songName1 + fileExtension_mp3; //TO BE Rewritten and deleted once file is LOADED
