@@ -67,11 +67,11 @@ if ( playList[currentSong]==null || soundEffects[currentSong]==null) { //ERROR, 
    println("Full Music File Pathway", file);
    */
 } else {
-  //CAuTION: will execute if variables created properly
+  //CAUTION: will execute if variables created properly
   playList[currentSong].play();
-  //soundEffects[currentSong].play();
+  soundEffects[currentSong].play();
   //
   printArray(playList);
-  //printArray(soundEffects);
+  printArray(soundEffects);
 }
 //
