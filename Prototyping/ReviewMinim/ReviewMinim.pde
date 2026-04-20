@@ -64,7 +64,13 @@ if ( playList[currentSong]==null || soundEffects[currentSong]==null) { //ERROR, 
   printArray(soundEffects);
   /*
   println("Music Pathway", musicDirectory);
-  println("Full Music File Pathway", file);
-  */
+   println("Full Music File Pathway", file);
+   */
+} else {
+  //CCATION: will execute if variables created properly
+  playList[currentSong].play();
+  //soundEffects[currentSong].play();
+  //
+  printArray(playList);
 }
 //
