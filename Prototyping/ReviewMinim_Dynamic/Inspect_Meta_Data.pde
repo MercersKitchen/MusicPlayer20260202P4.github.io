@@ -1,5 +1,5 @@
-void inspectMetaData( AudioMetaData song ) {
-  for (  ) {
+void inspectMetaData( AudioMetaData[] metaData ) {
+  for ( AudioMetaData song : metaData ) { //FOR-Each
     println(); //Empty Space
     println("File Name: " + song.fileName() );
     println("Length (in milliseconds): " + song.length() );

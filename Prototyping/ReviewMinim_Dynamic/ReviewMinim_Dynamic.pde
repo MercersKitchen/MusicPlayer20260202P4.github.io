@@ -24,6 +24,8 @@ import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 //
 //Global Variables
+int appWidth, appHeight;
+//
 Minim minim; //initates entire class
 int numberOfSongs = 8; //Best Practice
 int numberOfSoundEffects = 1; //Best Practice
@@ -37,8 +39,8 @@ void setup() {
   //Display
   size(700, 500); //width //height
   //fullScreen(); //displayWidth //displayHeight
-  int appWidth = width; //Best Practice
-  int appHeight = height;
+  appWidth = width; //Best Practice
+  appHeight = height;
   //
   //Music Loading - STRUCTURED Review
   minim = new Minim(this); //Manditory
@@ -63,7 +65,7 @@ void setup() {
   songName[currentSong] = "Start_Your_Engines";
   currentSong++;
   songName[currentSong] = "The_Simplest";
-  currentSong = 0; //CAUTION: should be a reference to the line
+  currentSong = resetDefault(currentSong);
   //
   String soundEffect1 = "Car_Door_Closing";
   String fileExtension_mp3 = ".mp3";
@@ -79,36 +81,39 @@ void setup() {
     playListMetaData[ currentSong ] = playList[ currentSong ].getMetaData();
     currentSong++;
   }//End FOR-Each
-  currentSong = 0; //CAUTION: should be a reference to the line
+  currentSong = resetDefault(currentSong);
   //
   pathway = soundEffectsDirectory + soundEffect1 + fileExtension_mp3; //Rewritting FILE
   soundEffects[currentSong] = minim.loadFile( pathway ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
   //
   //ERROR Check Music and Sound Effect Variables
   //Thrown by commenting out FILE, playList[] or soundEffects[]
-  for () {}//End FOR-Each
-  if ( playList[currentSong]==null || soundEffects[currentSong]==null) { //ERROR, play list is NULL
+  for ( AudioPlayer song : playList ) {
+    if ( song == null ) { //ERROR, play list is NULL
+      //See FILE or minim.loadFile
+      println("The Play List did not load properly");
+      printArray(playList);
+      exit();
+    }
+  }//End Play List ERROR Check
+  //
+  if ( soundEffects[currentSong]==null ) { //ERROR, play list is NULL
     //See FILE or minim.loadFile
-    println("The Play List or Sound Effects did not load properly");
-    printArray(playList);
+    println("The Sound Effects did not load properly");
     printArray(soundEffects);
     exit();
-    /*
-  println("Music Pathway", musicDirectory);
-     println("Full Music File Pathway", file);
-     */
-  } else {
-    //CAUTION: will execute if variables created properly
-    //playList[currentSong].play();
-    //soundEffects[currentSong].play();
-    //
-    //printArray(playList);
-    //printArray(soundEffects);
   }
-  inspectMetaData( playListMetaData[currentSong] );
+  //
+  //playList[currentSong].play();
+  //soundEffects[currentSong].play();
+  //
+  inspectMetaData( playListMetaData );
+  //
+  
 }//End Setup
 //
 void draw() {
+  drawText( playListMetaData[currentSong].title(), playListMetaData[currentSong].genre() ); //Note: also author
 }//End Draw
 //
 void mousePressed() {
