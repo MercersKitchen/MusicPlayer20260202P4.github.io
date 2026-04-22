@@ -72,13 +72,13 @@ void setup() {
      */
   } else {
     //CAUTION: will execute if variables created properly
-    playList[currentSong].play();
+    //playList[currentSong].play();
     //soundEffects[currentSong].play();
     //
-    printArray(playList);
-    printArray(soundEffects);
+    //printArray(playList);
+    //printArray(soundEffects);
   }
-  inspectMetaData();
+  inspectMetaData( playListMetaData[currentSong] );
 }//End Setup
 //
 void draw() {
