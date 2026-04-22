@@ -25,9 +25,10 @@ import ddf.minim.ugens.*;
 //
 //Global Variables
 Minim minim; //initates entire class
-int numberOfSongs = 1; //Best Practice
+int numberOfSongs = 8; //Best Practice
 int numberOfSoundEffects = 1; //Best Practice
 AudioPlayer[] playList = new AudioPlayer[ numberOfSongs ];
+AudioMetaData[] playListMetaData = new AudioMetaData[ numberOfSongs ];
 AudioPlayer[] soundEffects = new AudioPlayer[ numberOfSoundEffects];
 int currentSong = numberOfSongs - numberOfSongs; //ZERO, Math Property
 //
@@ -54,6 +55,7 @@ void setup() {
   String soundEffectsDirectory =  upArrow + upArrow + upArrow + normalFolder + soundEffectsFolder; //Concatenation
   String pathway = musicDirectory + songName1 + fileExtension_mp3; //TO BE Rewritten and deleted once file is LOADED
   playList[ currentSong ] = minim.loadFile( pathway ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+  playListMetaData[ currentSong ] = playList[ currentSong ].getMetaData();
   pathway = soundEffectsDirectory + soundEffect1 + fileExtension_mp3; //Rewritting FILE
   soundEffects[currentSong] = minim.loadFile( pathway ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
   //
@@ -76,6 +78,7 @@ void setup() {
     printArray(playList);
     printArray(soundEffects);
   }
+  inspectMetaData();
 }//End Setup
 //
 void draw() {
