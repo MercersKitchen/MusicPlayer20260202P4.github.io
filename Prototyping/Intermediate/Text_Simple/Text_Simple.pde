@@ -2,9 +2,10 @@
  */
 //
 //Display
-fullScreen();
-int appWidth = displayWidth;
-int appHeight = displayHeight;
+size(700, 500);
+//fullScreen();
+int appWidth = width; //displayWidth;
+int appHeight = height; //displayHeight;
 //
 //Population: DIVs
 //Note: int(i/4) && i%4==2,3 (width, height)
@@ -31,7 +32,7 @@ rect(messageDIV_X, messageDIV_Y, messageDIV_Width, messageDIV_Height);
 //
 //Strings, Text, Literal
 //Note: metaData.mp3
-String title = "Text Place Holder!"; //
+String title = "01"; //"0": Smallest Characvters for largest font size in any rect(width)
 /* Full String longer than Rectangle, "Wahoo! I changed 2D Size."
  - divHeight must fit the font size or text is not shown (Advanced, error check includes %-decrease)
  - Fonts includes the in WHITE SPACE around the foreground "coloured ink"
@@ -49,22 +50,13 @@ String title = "Text Place Holder!"; //
 // Students enter all text from Case Study
 //
 // Fonts from OS
-//RECT(#) && RECT(#)+3
-float fontSize1 = appHeight; //Entire Program, Algorithm to have smallest font size
-float fontSize2 = appHeight; //Entire Program, Algorithm to have smallest font size
-float fontSize3 = appHeight; //Entire Program, Algorithm to have smallest font size
+//rect(height) is biggest font is word is the smallest
+float fontSize1 = songTitleDivHeight; //1:1 Font Height to rectHeight
+float fontSize2 = messageDIV_Height; 
+float fontSize3 = quitHeight; 
 PFont font; //Font Varaible Name, able to have more than one Font
 String harrington = "Harrington"; //Spelling of the Font Matters, see PFont.list() v Create Font above
 font = createFont(harrington, fontSize1);
-//
-// Aspect Ratio for Harrington
-float fontSizeHarrington = 83; //Default fontSize for ~100%
-float divHeightHarrington = songTitleDivHeight; //Key:Value, value=120
-float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington; //#<1
-//RECT(#) && RECT(#)+3
-fontSize1 = songTitleDivHeight * harringtonAspectRatio;
-fontSize2 = messageDIV_Height * harringtonAspectRatio;
-fontSize3 = quitHeight * harringtonAspectRatio;
 //
 //Drawing Text
 color purpleInk = #2C08FF; //AP MiniLesson on bit, 8-bit or byte (grey scale, 256), colour
@@ -72,7 +64,7 @@ color whiteInk = #FFFFFF; //Grey Scale is 255
 color resetInk = whiteInk;
 fill(purpleInk); //Ink, hexidecimal copied from Color Selector
 //Grey Scale 0-255
-textAlign (CENTER, BOTTOM); //Align X&Y, see Processing.org / Reference
+textAlign (CENTER, TOP); //Align X&Y, see Processing.org / Reference
 //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
 //
 // Procedure Passing RECT(#2) && fontSize(RECT#)
@@ -87,7 +79,7 @@ while ( textWidth(title) > songTitleDivWidth ) {
     exit();
   }
   fontSize1 *= constantDecrease;
-  textFont(font, fontSize1);
+  textFont(font, fontSize1); //happens before text()
 }
 text( title, songTitleDivX, songTitleDivY, songTitleDivWidth, songTitleDivHeight );
 //
@@ -120,4 +112,4 @@ while ( textWidth(title) > quitWidth ) {
 text( title, quitX, quitY, quitWidth, quitHeight );
 fill(resetInk);
 //
-println(songTitleDivHeight);
+//println(fontSize1, fontSize2, fontSize3);

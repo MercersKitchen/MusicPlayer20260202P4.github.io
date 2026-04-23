@@ -113,7 +113,7 @@ void setup() {
 }//End Setup
 //
 void draw() {
-  drawText( playListMetaData[currentSong].title(), playListMetaData[currentSong].genre() ); //Note: also author
+  drawText( playListMetaData[currentSong].title(), playListMetaData[currentSong].title() ); //Note: also author // playListMetaData[currentSong].genre()
 }//End Draw
 //
 void mousePressed() {

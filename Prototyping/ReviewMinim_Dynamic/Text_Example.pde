@@ -45,6 +45,7 @@ void drawText(String title, String message) {
   // Aspect Ratio for Harrington
   float fontSizeHarrington = 83; //Default fontSize for ~100%
   float divHeightHarrington = songTitleDivHeight; //Key:Value, value=120
+  println(songTitleDivHeight);
   float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington; //#<1
   //RECT(#) && RECT(#)+3
   fontSize1 = songTitleDivHeight * harringtonAspectRatio;
@@ -57,7 +58,7 @@ void drawText(String title, String message) {
   color resetInk = whiteInk;
   fill(purpleInk); //Ink, hexidecimal copied from Color Selector
   //Grey Scale 0-255
-  textAlign (CENTER, BOTTOM); //Align X&Y, see Processing.org / Reference
+  textAlign (CENTER, TOP); //Align X&Y, see Processing.org / Reference
   //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
   //
   // Procedure Passing RECT(#2) && fontSize(RECT#)
@@ -74,6 +75,7 @@ void drawText(String title, String message) {
     fontSize1 *= constantDecrease;
     textFont(font, fontSize1);
   }
+  textFont(font, 53);
   text( title, songTitleDivX, songTitleDivY, songTitleDivWidth, songTitleDivHeight );
   //
   textFont(font, fontSize2); //must include textSize() before text() & textWidth()
