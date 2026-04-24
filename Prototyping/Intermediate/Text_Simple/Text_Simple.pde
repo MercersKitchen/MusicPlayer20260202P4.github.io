@@ -48,12 +48,13 @@ String title = "01"; //"0": Smallest Characvters for largest font size in any re
  //Tools / Create Font / Find Font / Do Not Press "OK", known conflict between loadFont() and createFont()
  */
 // Students enter all text from Case Study
+String x = "X";
 //
 // Fonts from OS
 //rect(height) is biggest font is word is the smallest
 float fontSize1 = songTitleDivHeight; //1:1 Font Height to rectHeight
-float fontSize2 = messageDIV_Height; 
-float fontSize3 = quitHeight; 
+float fontSize2 = messageDIV_Height;
+float fontSize3 = quitHeight;
 PFont font; //Font Varaible Name, able to have more than one Font
 String harrington = "Harrington"; //Spelling of the Font Matters, see PFont.list() v Create Font above
 font = createFont(harrington, fontSize1);

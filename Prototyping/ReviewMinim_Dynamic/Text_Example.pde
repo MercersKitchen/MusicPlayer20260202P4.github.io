@@ -21,7 +21,7 @@ void drawText(String title, String message) {
   //DIV: Image
   rect(songTitleDivX, songTitleDivY, songTitleDivWidth, songTitleDivHeight);
   rect(messageDIV_X, messageDIV_Y, messageDIV_Width, messageDIV_Height);
-  rect(quitX, quitHeight, quitWidth, quitHeight);
+  rect(quitX, quitY, quitWidth, quitHeight);
   //
   /*Fonts from OS
    println("Start of Console"); //ERROR: in case CONSOLE Memory not enough
@@ -34,23 +34,13 @@ void drawText(String title, String message) {
   String x = "X";
   //
   // Fonts from OS
-  //RECT(#) && RECT(#)+3
-  float fontSize1 = appHeight; //Entire Program, Algorithm to have smallest font size
-  float fontSize2 = appHeight; //Entire Program, Algorithm to have smallest font size
-  float fontSize3 = appHeight; //Entire Program, Algorithm to have smallest font size
+  //rect(height) is biggest font is word is the smallest
+  float fontSize1 = songTitleDivHeight; //1:1 Font Height to rectHeight
+  float fontSize2 = messageDIV_Height;
+  float fontSize3 = quitHeight;
   PFont font; //Font Varaible Name, able to have more than one Font
   String harrington = "Harrington"; //Spelling of the Font Matters, see PFont.list() v Create Font above
   font = createFont(harrington, fontSize1);
-  //
-  // Aspect Ratio for Harrington
-  float fontSizeHarrington = 83; //Default fontSize for ~100%
-  float divHeightHarrington = songTitleDivHeight; //Key:Value, value=120
-  println(songTitleDivHeight);
-  float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington; //#<1
-  //RECT(#) && RECT(#)+3
-  fontSize1 = songTitleDivHeight * harringtonAspectRatio;
-  fontSize2 = messageDIV_Height * harringtonAspectRatio;
-  fontSize3 = quitHeight * harringtonAspectRatio;
   //
   //Drawing Text
   color purpleInk = #2C08FF; //AP MiniLesson on bit, 8-bit or byte (grey scale, 256), colour
@@ -75,7 +65,6 @@ void drawText(String title, String message) {
     fontSize1 *= constantDecrease;
     textFont(font, fontSize1);
   }
-  textFont(font, 53);
   text( title, songTitleDivX, songTitleDivY, songTitleDivWidth, songTitleDivHeight );
   //
   textFont(font, fontSize2); //must include textSize() before text() & textWidth()
@@ -88,6 +77,12 @@ void drawText(String title, String message) {
       exit();
     }
     fontSize2 *= constantDecrease;
+    textFont(font, fontSize2);
+  }
+  if ( fontSize1 >= fontSize2 ) {
+    //Empty IF
+  } else {
+    fontSize2 = fontSize1*0.9;
     textFont(font, fontSize2);
   }
   text( message, messageDIV_X, messageDIV_Y, messageDIV_Width, messageDIV_Height );
@@ -107,8 +102,6 @@ void drawText(String title, String message) {
   fontSize3 *= 0.1;
   text( x, quitX, quitY, quitWidth, quitHeight );
   fill(resetInk);
-  //
-  println(fontSize1, fontSize2, fontSize3); //CAUTION: size of font illustrates importance
   //
 }//End Draw Text
 //
