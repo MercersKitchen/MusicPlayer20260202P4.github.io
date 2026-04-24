@@ -109,7 +109,6 @@ void setup() {
   //
   inspectMetaData( playListMetaData );
   //
-  
 }//End Setup
 //
 void draw() {
