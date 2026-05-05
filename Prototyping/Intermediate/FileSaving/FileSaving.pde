@@ -49,11 +49,15 @@ void setup() {
   //println(saveTxtPath_currentSong);
   //println(saveTxtPath_randomStart);
   //
-  populationSetup();
+  //populationSetup();
   //
   musicLoad();
   //
   playList[ currentSong ].play(); //Auto Start Music Player
   //
 } //End setup
+//
+void draw() {
+  if ( playList[currentSong].isPlaying()==false ) println("Current Song is numer", currentSong);
+} //End draw
 //
