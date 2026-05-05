@@ -49,3 +49,11 @@ void setup() {
   //println(saveTxtPath_currentSong);
   //println(saveTxtPath_randomStart);
   //
+  populationSetup();
+  //
+  musicLoad();
+  //
+  playList[ currentSong ].play(); //Auto Start Music Player
+  //
+} //End setup
+//
