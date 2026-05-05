@@ -1,3 +1,4 @@
+import ddf.minim.*;
 /* Loading Music
  - There are different folders of music
  - Load Multiple PlayLists based on Genre
@@ -14,3 +15,12 @@
  
  */
 //Library - Minim
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+//
+import java.io.File;
+//
+//Global Variables
