@@ -3,7 +3,7 @@ void musicLoad() {
   String absolutePath = sketchPath(); //To MAIN Program
   //println("Absolute Path:", absolutePath);
   String upArrow = "/../../../";
-  String musicDirectory = "Dependancies/Sem 2/Music All/"; //Hardcoded, always relative to the MAIN program
+  String musicDirectory = "Dependancies/Music/"; //Hardcoded, always relative to the MAIN program
   String musicPathway = absolutePath + upArrow + musicDirectory;
   //println("Music Pathway:", musicPathway);
   //println(); //Note: space left, one method formatting CONSOLE
