@@ -41,4 +41,11 @@ void setup() {
   //fullScreen();
   size(700, 500);
   //
-  
+  //
+  //Saving Last Known Song Played
+  // Initialize the save file path
+  saveTxtPath_currentSong = sketchPath("currentSong.txt");
+  saveTxtPath_randomStart = sketchPath("randomStart.txt");
+  //println(saveTxtPath_currentSong);
+  //println(saveTxtPath_randomStart);
+  //
