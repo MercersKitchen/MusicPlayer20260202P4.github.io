@@ -9,6 +9,8 @@
  - Random First Song
  - Random Play List
  
+ - Example of a Try-Catch nested in an IF-Else for executing sequential code
+ - Example of multiple RETURN Statements to prioritize executing sequential code
  - Example of Shortcutting Boolean AND: mousepressed(), quitDoubleClick==true
  - Example of Background Colouring Buttons and saving colour based on preference, Random Start
  
