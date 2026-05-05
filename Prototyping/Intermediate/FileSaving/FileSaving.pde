@@ -36,3 +36,9 @@ int currentSong; //Reads .txt file to populate last known song
 //
 Boolean randomStart=false;
 //
+void setup() {
+  // Display
+  //fullScreen();
+  size(700, 500);
+  //
+  
