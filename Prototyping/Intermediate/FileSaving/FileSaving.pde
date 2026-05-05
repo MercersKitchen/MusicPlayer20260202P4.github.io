@@ -1,4 +1,3 @@
-import ddf.minim.*;
 /* Loading Music
  - There are different folders of music
  - Load Multiple PlayLists based on Genre
@@ -15,6 +14,7 @@ import ddf.minim.*;
  
  */
 //Library - Minim
+import ddf.minim.*;
 import ddf.minim.analysis.*;
 import ddf.minim.effects.*;
 import ddf.minim.signals.*;
